@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Nav from "./components/Navbar";
+import Home from "./components/Home";
+import ReactDOM from "react-dom";
+import Layout from "./components/Layout";
+import About from "./components/About";
+import SignInSide from "./auth/Signin";
+import Location from "./components/Location";
+import Signup from "./auth/Signup";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
+  const gradientBackground = {
+    background: "rgb(225, 151, 235)",
+    height: "100vh",
+    fontFamily: "OCR A Std, monospace",
+    backgroundImage:
+      "radial-gradient(circle, rgba(225, 151, 235, 0.25) 0%, rgba(239, 181, 237, 0.27) 100%)",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={gradientBackground}>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Layout />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/location" element={<Location />}></Route>
+          <Route path="/about_us" element={<About />}></Route>
+          <Route path="/userlogin" element={<SignInSide />}></Route>
+          <Route path="/signup" element={<Signup />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
 
 export default App;
