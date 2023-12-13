@@ -18,7 +18,6 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    backgroundColor: 'rgb(225, 151, 235)',
   },
 }));
 

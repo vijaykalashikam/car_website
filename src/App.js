@@ -11,7 +11,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   const gradientBackground = {
-    background: "rgb(225, 151, 235)",
     height: "100vh",
     fontFamily: "OCR A Std, monospace",
     backgroundImage:
