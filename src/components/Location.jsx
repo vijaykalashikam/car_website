@@ -25,17 +25,17 @@ function Location() {
     map,
     setMap
   ] = useState({});
-  // const increaseZoom = () => {
-  //   if (mapZoom < MAX_ZOOM) {
-  //     setMapZoom(mapZoom + 1);
-  //   }
-  // };
+  const increaseZoom = () => {
+    if (mapZoom < MAX_ZOOM) {
+      setMapZoom(mapZoom + 1);
+    }
+  };
   
-  // const decreaseZoom = () => {
-  //   if (mapZoom > 1) {
-  //     setMapZoom(mapZoom - 1);
-  //   }
-  // };
+  const decreaseZoom = () => {
+    if (mapZoom > 1) {
+      setMapZoom(mapZoom - 1);
+    }
+  };
   
   const updateMap = () => {
     map.setCenter([parseFloat(mapLongitude), parseFloat(mapLatitude)]);

@@ -57,8 +57,7 @@ function SignInSide() {
             'url(https://wepik.com/api/image/ai/9a77bc49-dc90-49b6-b2d8-98c2d26977f6)',
           backgroundRepeat: 'no-repeat',
           backgroundColor: 'rgb(225, 151, 235)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+      
         }}
       />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -117,7 +116,7 @@ function SignInSide() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link to="#" variant="body2" color="secondary">
+                <Link to="/forgotpassword" variant="body2" color="secondary">
                   Forgot password?
                 </Link>
               </Grid>
